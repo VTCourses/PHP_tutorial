@@ -1,0 +1,12 @@
+<?php
+
+DEFINE('DB_USER', '');
+DEFINE('DB_PASSWORD', '');
+DEFINE('DB_HOST', '');
+DEFINE('DB_NAME', '');
+
+$pg_connection_string = "host=" . DB_HOST . " dbname=" . DB_NAME . " user=" . DB_USER . " password=" . DB_PASSWORD;
+
+$dbconn = pg_connect($pg_connection_string) or die('Could not connect: ' . pg_last_error());
+
+?>
